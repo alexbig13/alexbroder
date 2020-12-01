@@ -12,9 +12,13 @@ btn1.addEventListener('click', function () {
     let del = document.createElement('button');
     let doneBtn = document.createElement('button');
     doneBtn.innerHTML = 'Finished?';
+    doneBtn.setAttribute('class', 'btn btn-outline-success');
+    doneBtn.style.position = 'relative';
+    doneBtn.style.left = `5px`;
+    del.setAttribute('class', 'btn btn-outline-danger');
     del.innerHTML = 'Delete';
     list.appendChild(li);
-    li.innerHTML += input.value + " ";
+    li.innerHTML += input.value + "<br/> ";
     li.appendChild(del);
     li.appendChild(doneBtn);
     del.addEventListener('click', function () {
